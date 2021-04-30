@@ -6,7 +6,8 @@ import time
 def take_screenshot(root_window):
     try:
         now = time.time()
-        root_window.destroy()
+        # BUG:
+        # root_window.destroy()
         my_screenshot = screenshot()
         my_screenshot.save(
             r"./screenshot_save/screenshot" + str(now) + ".png"
